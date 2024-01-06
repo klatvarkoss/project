@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  font-family: 'Mulish', sans-serif;
+}
+
+*:focus {
+  outline: 0;
+}
+
+body {
+  background-color: #EBEEF2;
+  padding: 50px;
+}
+
+.component--prices {
+  max-width: 920px;
+  margin: 0 auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.component--prices .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 55px;
+}
+
+.component--prices .title h3 {
+  font-size: 42px;
+  font-weight: 900;
+}
+
+.component--prices .title label {
+  width: 212px;
+  height: 50px;
+  background-color: #D4D9E0;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.component--prices .title label::before {
+  content: '';
+  width: 100px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #fff;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: -1;
+  -webkit-box-shadow: 0 15px 25px rgba(134, 147, 164, 0.74);
+          box-shadow: 0 15px 25px rgba(134, 147, 164, 0.74);
+  -webkit-transition: 200ms left ease-in-out;
+  transition: 200ms left ease-in-out;
+}
+
+.component--prices .title span {
+  width: 100px;
+  height: 40px;
+  display: -ms-grid;
+  display: grid;
+  font-size: 16px;
+  font-weight: bold;
+  place-items: center;
+  color: #171922;
+  opacity: 0.7;
+}
+
+.component--prices .packages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -20px;
+}
+
+.component--prices .packages .package {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0 20px;
+  background-color: #fff;
+  padding: 45px;
+  color: #171922;
+  font-weight: bold;
+  -webkit-transition: 300ms -webkit-box-shadow ease-in-out;
+  transition: 300ms -webkit-box-shadow ease-in-out;
+  transition: 300ms box-shadow ease-in-out;
+  transition: 300ms box-shadow ease-in-out, 300ms -webkit-box-shadow ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.component--prices .packages .package h6 {
+  margin-bottom: 35px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.component--prices .packages .package .price-info {
+  margin-bottom: 30px;
+}
+
+.component--prices .packages .package .price-info .price {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.component--prices .packages .package .price-info .price span::before {
+  content: attr(data-monthly-price);
+}
+
+.component--prices .packages .package .price-info .description {
+  font-size: 18px;
+  opacity: .71;
+}
+
+.component--prices .packages .package .price-info .description span::before {
+  content: attr(data-monthly-text);
+}
+
+.component--prices .packages .package p {
+  font-size: 16px;
+  font-weight: 600;
+  opacity: .71;
+  margin-bottom: 35px;
+}
+
+.component--prices .packages .package .button {
+  height: 60px;
+  margin-top: auto;
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  place-items: center;
+  border: 1px solid #171922;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #171922;
+  -webkit-transition: 300ms background-color ease-in-out, 300ms color ease-in-out;
+  transition: 300ms background-color ease-in-out, 300ms color ease-in-out;
+}
+
+.component--prices .packages .package:hover {
+  -webkit-box-shadow: 0 19px 50px -20px rgba(134, 147, 164, 0.74);
+          box-shadow: 0 19px 50px -20px rgba(134, 147, 164, 0.74);
+}
+
+.component--prices .packages .package:hover .button {
+  background-color: #171922;
+  color: #fff;
+}
+
+.component--prices #price-switch {
+  display: none;
+}
+
+.component--prices #price-switch:checked + .title label::before {
+  left: 105px;
+}
+
+.component--prices #price-switch:checked + .title + .packages .package .price-info .price span::before {
+  content: attr(data-yearly-price);
+}
+
+.component--prices #price-switch:checked + .title + .packages .package .price-info .description span::before {
+  content: attr(data-yearly-text);
+}
+/*# sourceMappingURL=main.css.map */
